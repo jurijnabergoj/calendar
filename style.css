@@ -1,0 +1,208 @@
+:root {
+  --primary-color: #3f72af;
+  --secondary-color: #93bfcf;
+  --third-color: #eeeeee;
+  --fourth-color: #112d4e;
+  --fifth-color: #f38181;
+  --text-color: #222831;
+  --bg-color: #dbe2ef;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  background-color: #fff;
+}
+input[type="number"],
+select {
+  border-radius: 5px;
+}
+input[type="file"] {
+  display: none;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  color: #fff;
+  background-color: var(--primary-color);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  color: #ccc;
+  background-color: var(--fourth-color);
+  transform: scale(1.05);
+}
+.holiday-file-upload {
+  width: 135px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  color: #fff;
+  background-color: var(--primary-color);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.holiday-file-upload:hover {
+  color: #ccc;
+  background-color: var(--fourth-color);
+  transform: scale(1.05);
+}
+.close-calendar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.close-calendar .toggle-calendar-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calendar {
+  width: 100%;
+  max-width: 650px;
+  padding: 30px 30px;
+  border-radius: 15px;
+  background-color: var(--bg-color);
+}
+.calendar .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--fourth-color);
+}
+.calendar .header .month-year {
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+.calendar .header .today-btn,
+.dummy-btn {
+  width: 50px;
+  height: 40px;
+}
+.weekdays {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.weekdays .day {
+  width: calc(100% / 7 - 10px);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+.days {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--fourth-color);
+}
+.days .day {
+  width: calc(100% / 7 - 10px);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-color);
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.days .day:not(.prev):not(.next):hover {
+  transform: scale(1.05);
+}
+.days .day.today {
+  border: 3px solid var(--fifth-color);
+}
+.days .day.holiday {
+  background-image: url("https://cdn-icons-png.flaticon.com/512/2289/2289685.png");
+  background-size: 45px;
+  background-repeat: no-repeat;
+  background-position: bottom left -13px;
+  border: 3px solid var(--third-color);
+}
+.days .day.sunday {
+  color: var(--text-color);
+  border: 3px solid var(--secondary-color);
+}
+.days .day.flash {
+  border: 3px solid var(--fourth-color);
+}
+.days .day.prev,
+.days .day.next {
+  color: #ccc;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.jump-date,
+.select-full-date,
+.select-holiday {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-top: 10px;
+  font-size: 18px;
+}
+.jump-date .btn,
+.select-full-date .btn {
+  padding: 10px;
+  width: 25px;
+  height: 25px;
+}
+.jump-date .jump-month,
+.jump-year {
+  height: 25px;
+  width: 70px;
+  text-align: center;
+  font-size: 14px;
+  margin-left: 5px;
+  margin-right: 10px;
+  border: 1px solid;
+}
+.select-full-date .select-date {
+  width: 140px;
+  text-align: center;
+  margin-left: 5px;
+  border-radius: 5px;
+  border: 1px solid;
+  height: 25px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+.select-holiday {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-top: 10px;
+}
